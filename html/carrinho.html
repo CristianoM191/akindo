@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrinho — AKINDO</title>
+  <meta name="description" content="Revise os produtos selecionados das marcas do ecossistema AKINDO antes de finalizar sua compra." />
+  <meta name="theme-color" content="#0F172A" />
+
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../imgs/pwa/icon-192.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/header-footer.css" />
+  <link rel="stylesheet" href="../css/carrinho.css" />
+</head>
+<body>
+
+<div id="page-loader">
+    <img
+        src="../imgs/logos/hex-loader.svg"
+        alt="Carregando"
+        class="loader-logo"
+    >
+</div>
+
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="homepage.html" class="akindo-logo">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <polygon points="16,2 28,9 28,23 16,30 4,23 4,9" fill="none" />
+          <polygon points="16,2 28,9 28,23 16,30 4,23 4,9" />
+        </svg>
+        <span class="word-wrap">
+          AKINDO
+          <span class="word-sub">Mago do Comércio</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="homepage.html">Início</a>
+        <a href="homepage.html#bento-grid">Produtos</a>
+        <a href="homepage.html#brands-row">Marcas</a>
+        <a href="happy-berry.html">Happy Berry</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-btn" href="login.html" aria-label="Conta">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" stroke-linecap="round"/></svg>
+        </a>
+        <a class="icon-btn" href="carrinho.html" aria-label="Carrinho" aria-current="page">
+          <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span class="bar"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <nav class="mobile-nav" aria-label="Navegação mobile">
+    <div class="container">
+      <a href="homepage.html">Início</a>
+      <a href="homepage.html#bento-grid">Produtos</a>
+      <a href="homepage.html#brands-row">Marcas</a>
+      <a href="happy-berry.html">Happy Berry</a>
+      <a href="login.html">Minha conta</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="container cart-page">
+      <div class="cart-header">
+        <span class="eyebrow">Sua seleção</span>
+        <h1>Carrinho</h1>
+        <p>Os itens abaixo são de diferentes marcas do ecossistema AKINDO. O pagamento é processado de forma unificada.</p>
+      </div>
+
+      <div class="cart-layout" id="cart-layout">
+        <div>
+          <div class="cart-items" id="cart-items"></div>
+
+          <div class="cart-empty" id="cart-empty" hidden>
+            <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+            <h2>Seu carrinho está vazio</h2>
+            <p>Explore as marcas do ecossistema AKINDO e encontre peças com identidade própria.</p>
+            <a href="homepage.html" class="btn btn-primary" style="display:inline-flex; width:auto; padding-left: var(--space-7); padding-right: var(--space-7);">
+              Explorar AKINDO
+            </a>
+          </div>
+        </div>
+
+        <aside class="cart-summary" id="cart-summary">
+          <h2>Resumo do pedido</h2>
+          <div class="summary-row">
+            <span id="summary-count">0 itens</span>
+            <span id="summary-subtotal">R$ 0,00</span>
+          </div>
+          <div class="summary-row">
+            <span>Frete</span>
+            <span>Calculado no checkout</span>
+          </div>
+          <div class="summary-row is-total">
+            <span>Total</span>
+            <span id="summary-total">R$ 0,00</span>
+          </div>
+          <button class="btn btn-primary" type="button">Finalizar compra</button>
+          <p class="cart-summary-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01" stroke-linecap="round"/></svg>
+            Este é um projeto acadêmico — nenhum pagamento real será processado.
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="homepage.html" class="akindo-logo">
+          <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+            <polygon points="16,2 28,9 28,23 16,30 4,23 4,9" fill="none" />
+            <polygon points="16,2 28,9 28,23 16,30 4,23 4,9" />
+          </svg>
+          <span class="word-wrap">
+            AKINDO
+            <span class="word-sub">Mago do Comércio</span>
+          </span>
+        </a>
+        <p class="footer-tagline">
+          O marketplace que reúne marcas autorais independentes em uma estrutura profissional única.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Marketplace</h5>
+        <ul>
+          <li><a href="homepage.html">Início</a></li>
+          <li><a href="homepage.html#bento-grid">Produtos</a></li>
+          <li><a href="homepage.html#brands-row">Marcas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Marcas</h5>
+        <ul>
+          <li><a href="happy-berry.html">Happy Berry</a></li>
+          <li><a href="#">Kuro Line</a></li>
+          <li><a href="#">Risa Atelier</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Conta</h5>
+        <ul>
+          <li><a href="login.html">Entrar</a></li>
+          <li><a href="carrinho.html">Carrinho</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 AKINDO. Projeto acadêmico inspirado em Gokinjo Monogatari.</span>
+    </div>
+  </footer>
+
+  <script src="../js/cart.js"></script>
+  <script src="../js/header.js"></script>
+  <script src="../js/carrinho.js"></script>
+  <script src="../js/pwa.js"></script>
+  <script type="module" src="../js/auth-guard.js"></script>
+</body>
+</html>

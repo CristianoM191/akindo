@@ -1,0 +1,352 @@
+/* ============================================
+   AKINDO — Página de Login
+   ============================================ */
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 960px) {
+  .login-page {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Painel visual (esquerda em desktop) */
+.login-visual {
+  display: none;
+  position: relative;
+  background: var(--navy-900);
+  overflow: hidden;
+}
+
+@media (min-width: 960px) {
+  .login-visual {
+    display: block;
+  }
+}
+
+.login-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(201, 169, 97, 0.18), transparent 38%),
+    radial-gradient(circle at 82% 78%, rgba(148, 163, 184, 0.16), transparent 42%);
+}
+
+.login-visual-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-8);
+}
+
+.login-visual .akindo-logo {
+  color: var(--off-white);
+}
+.login-visual .akindo-logo .mark path,
+.login-visual .akindo-logo .mark polygon {
+  fill: var(--off-white);
+}
+.login-visual .akindo-logo .word-sub {
+  color: var(--slate-400);
+}
+
+.login-quote {
+  max-width: 460px;
+}
+
+.login-quote .eyebrow {
+  color: var(--gold);
+}
+
+.login-quote h2 {
+  color: var(--off-white);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 300;
+  line-height: 1.3;
+  margin-top: var(--space-3);
+}
+
+.login-quote h2 strong {
+  font-weight: 600;
+}
+
+.login-seals {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.login-seals .curation-seal .seal-hex {
+  stroke: rgba(248, 250, 252, 0.35);
+}
+.login-seals .curation-seal .seal-num {
+  fill: var(--off-white);
+}
+
+/* Painel de formulário */
+.login-form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-6) var(--space-4);
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .login-form-panel {
+    padding: var(--space-8);
+  }
+}
+
+.login-form-wrap {
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login-form-wrap .akindo-logo {
+  margin-bottom: var(--space-7);
+  justify-content: center;
+}
+
+@media (min-width: 960px) {
+  .login-form-wrap .akindo-logo {
+    display: none;
+  }
+}
+
+.login-header {
+  margin-bottom: var(--space-6);
+}
+
+.login-header h1 {
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 600;
+}
+
+.login-header p {
+  margin-top: var(--space-2);
+  color: var(--slate-400);
+  font-size: 15px;
+}
+
+.login-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.login-tab {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: var(--space-3) 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--slate-400);
+  border-bottom: 2px solid transparent;
+  transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+
+.login-tab.is-active {
+  color: var(--navy-900);
+  border-bottom-color: var(--navy-900);
+}
+
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--graphite);
+}
+
+.form-control {
+  width: 100%;
+  padding: 13px var(--space-4);
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  font-size: 15px;
+  color: var(--graphite);
+  transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+
+.form-control:focus {
+  border-color: var(--navy-900);
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08);
+  outline: none;
+}
+
+.form-control.has-error {
+  border-color: var(--danger);
+}
+
+.field-error {
+  margin-top: var(--space-2);
+  font-size: 13px;
+  color: var(--danger);
+  min-height: 18px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+  font-size: 13px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.form-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--navy-900);
+}
+
+.link-muted {
+  color: var(--navy-900);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(15,23,42,0.25);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 14px var(--space-5);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+  width: 100%;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--navy-900);
+  color: var(--off-white);
+}
+
+.btn-primary:hover {
+  background: var(--navy-800);
+}
+
+.btn-primary[disabled] {
+  background: var(--slate-200);
+  color: var(--slate-400);
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: rgba(15, 23, 42, 0.15);
+  color: var(--graphite);
+}
+
+.btn-outline:hover {
+  border-color: var(--navy-900);
+  background: rgba(15, 23, 42, 0.03);
+}
+
+.btn-outline svg {
+  width: 18px;
+  height: 18px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+  font-size: 12px;
+  color: var(--slate-400);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.login-footer-text {
+  margin-top: var(--space-6);
+  text-align: center;
+  font-size: 14px;
+  color: var(--slate-400);
+}
+
+.form-message {
+  margin-bottom: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  display: none;
+}
+
+.form-message.is-visible {
+  display: block;
+}
+
+.form-message.is-error {
+  background: rgba(179, 38, 30, 0.08);
+  color: var(--danger);
+  border: 1px solid rgba(179, 38, 30, 0.2);
+}
+
+.form-message.is-success {
+  background: rgba(31, 122, 83, 0.08);
+  color: var(--success);
+  border: 1px solid rgba(31, 122, 83, 0.2);
+}
+
+/* Spinner do botão */
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(248, 250, 252, 0.35);
+  border-top-color: var(--off-white);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: none;
+}
+
+.btn[data-loading="true"] .btn-spinner {
+  display: inline-block;
+}
+
+.btn[data-loading="true"] .btn-label {
+  opacity: 0.7;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

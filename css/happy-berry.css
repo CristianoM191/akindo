@@ -1,0 +1,592 @@
+/* ============================================
+   Happy Berry — Tema da loja (dentro do AKINDO)
+   "Outra marca, mesmo ecossistema"
+   ============================================ */
+
+:root {
+  /* Paleta Happy Berry */
+  --hb-pink: #FF6B9D;
+  --hb-pink-soft: #FFD6E5;
+  --hb-cream: #FFF8F5;
+  --hb-text: #3A2E33;
+}
+
+/* Header com leve identidade da marca, mas estrutura igual ao AKINDO */
+.hb-header {
+  background: var(--hb-cream);
+  border-bottom: 1px solid rgba(255, 107, 157, 0.16);
+}
+
+.hb-header .akindo-logo .word-sub {
+  color: var(--hb-pink);
+}
+
+.hb-bar {
+  background: var(--navy-900);
+  color: var(--off-white);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.hb-bar a {
+  color: var(--gold);
+  font-weight: 600;
+  border-bottom: 1px solid currentColor;
+}
+
+/* -------- BREADCRUMB / SELO DE ECOSSISTEMA -------- */
+
+.hb-eco-strip {
+  background: var(--hb-cream);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid rgba(255, 107, 157, 0.1);
+}
+
+.hb-eco-strip .container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 12px;
+  color: var(--slate-400);
+}
+
+.hb-eco-strip a {
+  color: var(--navy-900);
+  font-weight: 600;
+}
+
+.hb-eco-strip svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* -------- HERO -------- */
+
+.hb-hero {
+  position: relative;
+  background: var(--hb-cream);
+  overflow: hidden;
+  padding: var(--space-8) 0 var(--space-9);
+}
+
+.hb-hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--hb-pink-soft) 0%, transparent 70%);
+  opacity: 0.9;
+}
+
+.hb-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -160px;
+  left: -100px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,107,157,0.12) 0%, transparent 70%);
+}
+
+.hb-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .hb-hero-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hb-hero-text .eyebrow {
+  color: var(--hb-pink);
+}
+
+.hb-logo-mark {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.hb-logo-mark svg {
+  width: 56px;
+  height: 56px;
+}
+
+.hb-logo-mark .hb-logo-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--hb-pink);
+  line-height: 1;
+}
+
+.hb-logo-mark .hb-logo-text small {
+  display: block;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+  margin-top: 4px;
+}
+
+.hb-hero-text h1 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--hb-text);
+  margin-top: var(--space-2);
+}
+
+.hb-hero-text h1 strong {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hb-hero-text p {
+  margin-top: var(--space-4);
+  font-size: 15px;
+  line-height: 1.8;
+  color: #6B5A60;
+  max-width: 440px;
+}
+
+.hb-hero-actions {
+  margin-top: var(--space-6);
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.btn-hb-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 15px var(--space-6);
+  border-radius: 100px;
+  background: var(--hb-pink);
+  color: var(--off-white);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+
+.btn-hb-primary:hover {
+  background: #ff5089;
+}
+.btn-hb-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-hb-primary svg { width: 16px; height: 16px; }
+
+.btn-hb-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 15px var(--space-6);
+  border-radius: 100px;
+  border: 1px solid rgba(58, 46, 51, 0.18);
+  color: var(--hb-text);
+  font-size: 14px;
+  font-weight: 600;
+  transition: border-color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+
+.btn-hb-outline:hover {
+  border-color: var(--hb-pink);
+  background: rgba(255, 107, 157, 0.06);
+}
+
+/* Visual hero — silhueta/cartão da Mikako */
+.hb-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hb-hero-card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--hb-pink-soft) 0%, #FFF0F4 60%, var(--hb-cream) 100%);
+  box-shadow: var(--shadow-lg);
+}
+
+.hb-hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.hb-hero-card-tag {
+  position: absolute;
+  bottom: var(--space-4);
+  left: var(--space-4);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.hb-hero-card-tag p:first-child {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--hb-text);
+}
+
+.hb-hero-card-tag p:last-child {
+  font-size: 12px;
+  color: var(--slate-400);
+  margin-top: 2px;
+}
+
+.hb-float-badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: var(--off-white);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  animation: hb-float 4s ease-in-out infinite;
+}
+
+.hb-float-badge strong {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--hb-pink);
+  line-height: 1;
+}
+
+.hb-float-badge span {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+  margin-top: 2px;
+}
+
+@keyframes hb-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* -------- FILTROS DE CATEGORIA -------- */
+
+.hb-filters {
+  padding: var(--space-6) 0 0;
+}
+
+.hb-filters-row {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+  scrollbar-width: none;
+}
+
+.hb-filters-row::-webkit-scrollbar { display: none; }
+
+.hb-filter-chip {
+  flex: 0 0 auto;
+  padding: 10px var(--space-5);
+  border-radius: 100px;
+  border: 1px solid rgba(58, 46, 51, 0.14);
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--hb-text);
+  white-space: nowrap;
+  transition: background var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+
+.hb-filter-chip.is-active,
+.hb-filter-chip:hover {
+  background: var(--hb-pink);
+  border-color: var(--hb-pink);
+  color: var(--off-white);
+}
+
+/* -------- GRID DE PRODUTOS -------- */
+
+.hb-products {
+  padding: var(--space-6) 0 var(--space-8);
+}
+
+.hb-products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .hb-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hb-products-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-5);
+  }
+}
+
+.hb-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(58, 46, 51, 0.06);
+  transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease);
+}
+
+.hb-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.hb-card-media {
+  position: relative;
+  aspect-ratio: 1 / 1.05;
+  background: linear-gradient(160deg, var(--hb-pink-soft) 0%, var(--hb-cream) 100%);
+  overflow: hidden;
+}
+
+.hb-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-slow) var(--ease);
+}
+
+.hb-card:hover .hb-card-media img {
+  transform: scale(1.06);
+}
+
+.hb-card-tag {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  background: var(--off-white);
+  color: var(--hb-pink);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+  box-shadow: var(--shadow-sm);
+}
+
+.hb-card-quick {
+  position: absolute;
+  bottom: var(--space-2);
+  right: var(--space-2);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--off-white);
+  color: var(--hb-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity var(--t-base) var(--ease), transform var(--t-base) var(--ease), background var(--t-fast) var(--ease);
+}
+
+.hb-card:hover .hb-card-quick,
+.hb-card:focus-within .hb-card-quick {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hb-card-quick:hover {
+  background: var(--hb-pink);
+  color: var(--off-white);
+}
+
+.hb-card-quick.is-added {
+  background: var(--success);
+  color: var(--off-white);
+}
+
+.hb-card-quick svg { width: 16px; height: 16px; }
+
+.hb-card-body {
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.hb-card-category {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+}
+
+.hb-card-body h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hb-text);
+  line-height: 1.4;
+}
+
+.hb-card-price {
+  margin-top: auto;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--hb-pink);
+}
+
+/* -------- SOBRE A MARCA -------- */
+
+.hb-about {
+  background: var(--navy-900);
+  color: var(--off-white);
+  padding: var(--space-9) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hb-about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 107, 157, 0.12), transparent 45%);
+}
+
+.hb-about-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .hb-about-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hb-about-text .eyebrow { color: var(--hb-pink); }
+
+.hb-about-text h2 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 300;
+  line-height: 1.35;
+  margin: var(--space-3) 0 var(--space-4);
+}
+
+.hb-about-text h2 strong {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hb-about-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--slate-200);
+  max-width: 480px;
+}
+
+.hb-ecosystem-note {
+  margin-top: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(248, 250, 252, 0.12);
+  background: rgba(248, 250, 252, 0.04);
+  max-width: 480px;
+}
+
+.hb-ecosystem-note .curation-seal .seal-hex {
+  stroke: var(--hb-pink);
+}
+.hb-ecosystem-note .curation-seal .seal-num {
+  fill: var(--off-white);
+}
+
+.hb-ecosystem-note p {
+  font-size: 13px;
+  color: var(--slate-200);
+  line-height: 1.6;
+}
+
+.hb-about-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.hb-about-card {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3/4;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(255,107,157,0.18), rgba(15,23,42,0.4));
+  border: 1px solid rgba(255,107,157,0.2);
+}
+
+.hb-about-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------- FOOTER HAPPY BERRY -------- */
+
+.hb-footer .footer-brand .hb-logo-mark .hb-logo-text {
+  color: var(--hb-pink);
+}
+
+.hb-footer .footer-col h5 {
+  color: var(--hb-pink);
+  opacity: 0.8;
+}

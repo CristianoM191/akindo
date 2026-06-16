@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Berry — by Mikako Kouda | AKINDO</title>
+  <meta name="description" content="Happy Berry, a marca autoral de moda de Mikako Kouda, agora dentro do ecossistema AKINDO. Camisetas, moletons, vestidos e acessórios autorais." />
+  <meta name="theme-color" content="#FF6B9D" />
+
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../imgs/pwa/icon-192.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/header-footer.css" />
+  <link rel="stylesheet" href="../css/homepage.css" />
+  <link rel="stylesheet" href="../css/happy-berry.css" />
+</head>
+<body>
+
+<div id="page-loader">
+    <img
+        src="../imgs/logos/hex-loader.svg"
+        alt="Carregando"
+        class="loader-logo"
+    >
+</div>
+
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header hb-header">
+    <div class="container header-inner">
+      <a href="../html/index.html" class="akindo-logo">
+      <img
+      src="../imgs/logos/logo_akindo.png"
+      alt="AKINDO"
+      class="logo-image">
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação Happy Berry">
+        <a href="#hb-products-grid">Produtos</a>
+        <a href="#hb-about">Sobre a marca</a>
+        <a href="homepage.html">Voltar ao AKINDO</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" aria-label="Buscar">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/></svg>
+        </button>
+        <a class="icon-btn" href="login.html" aria-label="Conta">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" stroke-linecap="round"/></svg>
+        </a>
+        <a class="icon-btn" href="carrinho.html" aria-label="Carrinho">
+          <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span class="bar"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <nav class="mobile-nav" aria-label="Navegação mobile Happy Berry">
+    <div class="container">
+      <a href="#hb-products-grid">Produtos</a>
+      <a href="#hb-about">Sobre a marca</a>
+      <a href="homepage.html">Voltar ao AKINDO</a>
+      <a href="login.html">Minha conta</a>
+    </div>
+  </nav>
+
+  <!-- Selo do ecossistema -->
+  <div class="hb-eco-strip">
+    <div class="container">
+      <span>Você está em uma marca parceira</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="homepage.html">Voltar ao ecossistema AKINDO</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hb-hero">
+      <div class="container hb-hero-inner">
+        <div class="hb-hero-text">
+          <div class="hb-logo-mark">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <!-- Logo Happy Berry: morango estilizado -->
+              <path d="M32 14c4 0 7 3 7 3s-2 4-7 4-7-4-7-4 3-3 7-3z" fill="#7BC47F"/>
+              <path d="M32 18c10 0 18 9 18 20s-8 20-18 20-18-9-18-20 8-20 18-20z" fill="#FF6B9D"/>
+              <circle cx="26" cy="32" r="1.6" fill="#FFE4E9"/>
+              <circle cx="36" cy="30" r="1.6" fill="#FFE4E9"/>
+              <circle cx="30" cy="40" r="1.6" fill="#FFE4E9"/>
+              <circle cx="40" cy="40" r="1.6" fill="#FFE4E9"/>
+              <circle cx="24" cy="42" r="1.6" fill="#FFE4E9"/>
+            </svg>
+            <span class="hb-logo-text">
+              Happy Berry
+              <small>by Mikako Kouda</small>
+            </span>
+          </div>
+
+          <span class="eyebrow">Marca 01 do ecossistema AKINDO</span>
+          <h1>Vista a sua <strong>própria história.</strong></h1>
+          <p>
+            Peças autorais que misturam alfaiataria leve, cores doces e detalhes
+            lúdicos — para quem quer se vestir como protagonista do próprio dia.
+            Cada coleção é assinada por Mikako Kouda.
+          </p>
+
+          <div class="hb-hero-actions">
+            <a href="#hb-products-grid" class="btn-hb-primary">
+              Ver coleção
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#hb-about" class="btn-hb-outline">Conhecer a marca</a>
+          </div>
+        </div>
+
+        <div class="hb-hero-visual">
+          <div class="hb-hero-card">
+            <img src="../imgs/brands/mikako-hero.png" alt="Mikako Kouda, criadora da Happy Berry"
+              onerror="this.remove();" />
+            <div class="hb-hero-card-tag">
+              <p>Coleção Sugar Drop</p>
+              <p>by Mikako Kouda</p>
+            </div>
+            <div class="hb-float-badge">
+              <strong>10+</strong>
+              <span>Peças</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FILTROS ===================== -->
+    <section class="hb-filters container">
+      <div class="hb-filters-row" id="hb-filters-row"></div>
+    </section>
+
+    <!-- ===================== PRODUTOS ===================== -->
+    <section class="hb-products">
+      <div class="container">
+        <div class="hb-products-grid" id="hb-products-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE A MARCA ===================== -->
+    <section class="hb-about" id="hb-about">
+      <div class="container hb-about-inner">
+        <div class="hb-about-text">
+          <span class="eyebrow">A criadora</span>
+          <h2>Por trás da Happy Berry está <strong>Mikako Kouda.</strong></h2>
+          <p>
+            Mikako sempre desenhou as próprias roupas — primeiro para si, depois para
+            amigas, até transformar isso em uma marca própria. A Happy Berry nasceu
+            dessa vontade de criar peças que tivessem identidade, cor e personalidade,
+            sem abrir mão do acabamento profissional.
+          </p>
+
+          <div class="hb-ecosystem-note">
+            <div class="curation-seal">
+              <svg viewBox="0 0 56 56" aria-hidden="true">
+                <polygon class="seal-hex" points="28,4 50,16 50,40 28,52 6,40 6,16" />
+                <text x="28" y="33" text-anchor="middle" class="seal-num">01</text>
+              </svg>
+            </div>
+            <p>
+              A Happy Berry é a marca nº 01 do ecossistema AKINDO — selecionada
+              pela curadoria por sua identidade visual consistente e qualidade
+              de acabamento.
+            </p>
+          </div>
+        </div>
+
+        <div class="hb-about-visual">
+          <div class="hb-about-card">
+            <img src="../imgs/brands/mikako-about.png" alt="Mikako Kouda no ateliê"
+              onerror="this.remove();" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer hb-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <div class="hb-logo-mark">
+          <svg viewBox="0 0 64 64" aria-hidden="true" style="width:40px; height:40px;">
+            <path d="M32 14c4 0 7 3 7 3s-2 4-7 4-7-4-7-4 3-3 7-3z" fill="#7BC47F"/>
+            <path d="M32 18c10 0 18 9 18 20s-8 20-18 20-18-9-18-20 8-20 18-20z" fill="#FF6B9D"/>
+          </svg>
+          <span class="hb-logo-text" style="font-size:20px;">
+            Happy Berry
+            <small>by Mikako Kouda</small>
+          </span>
+        </div>
+        <p class="footer-tagline">
+          Marca autoral parceira do ecossistema AKINDO. Moda com identidade, cor e personalidade.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Loja</h5>
+        <ul>
+          <li><a href="#hb-products-grid">Produtos</a></li>
+          <li><a href="#hb-about">Sobre a marca</a></li>
+          <li><a href="carrinho.html">Carrinho</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Ecossistema</h5>
+        <ul>
+          <li><a href="homepage.html">AKINDO — Início</a></li>
+          <li><a href="login.html">Minha conta</a></li>
+          <li><a href="homepage.html#brands-row">Outras marcas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Siga a marca</h5>
+        <ul>
+          <li><a href="#">Instagram da Happy Berry</a></li>
+          <li><a href="#">Instagram do AKINDO</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 Happy Berry × AKINDO. Projeto acadêmico inspirado em Gokinjo Monogatari.</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Adicionado ao carrinho</span>
+  </div>
+
+  <script src="../js/happy-berry-data.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/header.js"></script>
+  <script src="../js/happy-berry.js"></script>
+  <script src="../js/pwa.js"></script>
+  <script type="module" src="../js/auth-guard.js"></script>
+</body>
+</html>

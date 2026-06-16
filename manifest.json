@@ -1,0 +1,52 @@
+{
+  "name": "AKINDO — Mago do Comércio",
+  "short_name": "AKINDO",
+  "description": "Marketplace de marcas autorais independentes — curadoria, identidade e estrutura para criadores.",
+  "start_url": "./html/homepage.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F8FAFC",
+  "theme_color": "#0F172A",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "./imgs/logos/logo-akindo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./imgs/logos/logo-akindo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./imgs/logos/logo-akindo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./imgs/logos/logo-akindo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Happy Berry",
+      "short_name": "Happy Berry",
+      "description": "Acesse a loja Happy Berry de Mikako Kouda",
+      "url": "./html/happy-berry.html"
+    },
+    {
+      "name": "Carrinho",
+      "short_name": "Carrinho",
+      "description": "Ver itens no carrinho",
+      "url": "./html/carrinho.html"
+    }
+  ]
+}
